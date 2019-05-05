@@ -117,7 +117,7 @@ sudo ansible-playbook -i inventory install.yml
 ### Access the UI
 
 ```
-http://localhost:8080
+http://localhost
 ```
 
 Default username is "admin"
