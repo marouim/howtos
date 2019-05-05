@@ -185,4 +185,20 @@ virsh start my_new_vm
 virsh console my_new_vm
 ```
 
+# Using virt-install
+
+```
+virt-install \
+  --name vpn-server \
+  --os-type linux \
+  --os-variant centos7.0 \
+  --ram 2048 \
+  --vcpus 1 \
+  --import \
+  --disk path=/var/lib/libvirt/images/vpn-server.qcow2 \
+  --disk path=/var/lib/libvirt/images/vpn-server-config.iso,device=cdrom \
+  --virt-type kvm \
+  --graphics none \
+  --network bridge=br0
+```
 
